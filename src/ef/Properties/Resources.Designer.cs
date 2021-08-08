@@ -160,6 +160,14 @@ namespace Microsoft.EntityFrameworkCore.Tools.Properties
                 dataSource);
 
         /// <summary>
+        ///     Connection String: {connectionString}
+        /// </summary>
+        public static string ConnectionString(object? dataSource)
+            => string.Format(
+                GetString("DataSource", nameof(dataSource)),
+                dataSource);
+
+        /// <summary>
         ///     The connection string to the database. Defaults to the one specified in AddDbContext or OnConfiguring.
         /// </summary>
         public static string DbContextConnectionDescription

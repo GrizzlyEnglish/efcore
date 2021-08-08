@@ -34,6 +34,7 @@ namespace Microsoft.EntityFrameworkCore.Tools.Commands
             Reporter.WriteData("  \"databaseName\": " + Json.Literal(result["DatabaseName"] as string) + ",");
             Reporter.WriteData("  \"dataSource\": " + Json.Literal(result["DataSource"] as string) + ",");
             Reporter.WriteData("  \"options\": " + Json.Literal(result["Options"] as string));
+            Reporter.WriteData("  \"connectionString\": " + Json.Literal(result["ConnectionString"] as string));
             Reporter.WriteData("}");
         }
 
@@ -43,6 +44,7 @@ namespace Microsoft.EntityFrameworkCore.Tools.Commands
             Reporter.WriteData(Resources.ProviderName(result["ProviderName"]));
             Reporter.WriteData(Resources.DatabaseName(result["DatabaseName"]));
             Reporter.WriteData(Resources.DataSource(result["DataSource"]));
+            Reporter.WriteData(Resources.ConnectionString(result["ConnectionString"]));
             Reporter.WriteData(Resources.Options(result["Options"]));
         }
     }
